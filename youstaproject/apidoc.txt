@@ -1,0 +1,71 @@
+1)registration
+================
+
+url:http://127.0.0.1:8000/youstaapi/register
+method:post
+body:{"username","password","email","phone","address"}
+authorization:nill
+
+
+=============================================================
+
+2)cloths list api
+url:http://127.0.0.1:8000/youstaapi/cloths/
+method:get
+authorisation:nill
+status:progress
+==============================================================
+
+3)cloths detail
+
+url:http://127.0.0.1:8000/youstaapi/cloths/2/
+method:get
+
+4)add to cart api
+
+url:http://127.0.0.1:8000/api/cloths/{varient_id}/cart-add/
+
+method=post
+authorisation=username,password
+body=null
+
+5)cart list api
+url:http://127.0.0.1:8000/youstaapi/carts/
+authorisation=username,password
+method=get
+body=nill
+
+
+6)cart delete
+url:http://127.0.0.1:8000/youstaapi/carts/{cart_id}/
+method=delete
+authorisation=username,password
+body=null
+
+7)place order
+url:http://127.0.0.1:8000/api/cloths/{varient_id}/place_order/
+method=post
+body=address
+authorisation=username,password
+
+
+8)addreview
+url:http://127.0.0.1:8000/api/cloths/{cloth_id}/addreview/
+method=post
+body=rating , comment
+headers=token
+
+
+
+
+
+
+
+token
+
+1) obtain token
+url:http://127.0.0.1:8000/youstaapi/token/
+method=post
+body=username,password
+headers=nill
+
